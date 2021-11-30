@@ -13,6 +13,18 @@ class LinkedList {
       this.head.setNextNode(currentHead);
     }
   }
+
+  addToTail(data) {
+    let tail = this.head;
+    if (!tail) {
+      this.head = new Node(data);
+    } else {
+      while (tail.getNextNode() !== null) {
+        tail = tail.getNextNode();
+      }
+      tail.setNextNode(new Node(data));
+    }
+  }
 }
 
 module.exports = LinkedList;
