@@ -10,6 +10,10 @@ class Node {
     }
     this.next = node;
   }
+
+  setNext(data) {
+    this.next = data;
+  }
 }
 
 module.exports = Node;
