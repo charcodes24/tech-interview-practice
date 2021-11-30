@@ -25,6 +25,17 @@ class LinkedList {
       tail.setNextNode(new Node(data));
     }
   }
+
+  removeHead() {
+    const removedHead = this.head;
+    if (!removedHead) {
+      return;
+    }
+    if (removedHead.next) {
+      this.head = removedHead.next;
+    }
+    return removedHead.data;
+  }
 }
 
 module.exports = LinkedList;
