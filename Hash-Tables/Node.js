@@ -14,6 +14,10 @@ class Node {
   setNext(data) {
     this.next = data;
   }
+
+  getNextNode() {
+    return this.next;
+  }
 }
 
 module.exports = Node;
